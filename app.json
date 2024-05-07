@@ -7,9 +7,6 @@
         "video-extract",
         "pyrogram"
     ],
-    "repository": "https://github.com/XdityaHalder/SankiMusic",
-    "success_url": "https://t.me/AdityaDiscus",
-    "stack": "container",
     "env": {
         "API_ID": {
             "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑨𝒑𝒊 𝑰𝑫",
@@ -32,7 +29,6 @@
             "required": true
         }
     },
-    "addons": [],
     "buildpacks": [
         {
             "url": "heroku/python"
