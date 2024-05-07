@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     libc-dev \
     libffi-dev \
     musl-dev \
-    ffmpeg \ 
+    ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
 # Create a virtual environment
@@ -23,11 +23,8 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . .
 
-# Activate the virtual environment
-RUN . $VIRTUAL_ENV/bin/activate
-
 # Install Python dependencies listed in the Installer file
-RUN pip install --no-cache-dir --upgrade --requirement Installer
+RUN $VIRTUAL_ENV/bin/pip install --no-cache-dir --upgrade --requirement Installer
 
 # Specify the command to run your application
-CMD ["python3", "modules/main.py"]
+CMD ["$VIRTUAL_ENV/bin/python", "modules/main.py"]
