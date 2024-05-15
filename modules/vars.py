@@ -1,3 +1,3 @@
-api_id = "20995706"
-api_hash = "3240c1615daa1fbbca45c34a9bb8ecf2"
-bot_token = "6701499911:AAEqJIcbC3wScGEQ6owPQ9hyy7QatbORxd8"
+bot_token=os.environ.get("BOT_TOKEN"),
+api_id=int(os.environ.get("API_ID")),
+api_hash=os.environ.get("API_HASH"))
