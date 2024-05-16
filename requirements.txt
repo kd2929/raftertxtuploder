@@ -13,8 +13,8 @@ requests==2.31.0
 soupsieve==2.4.1
 TgCrypto==1.2.5
 urllib3==2.0.3
-websockets==11.0.3
-yt-dlp==2024.04.09
+websockets
+yt-dlp
 motor
 aiohttp==3.9.5
 aiofiles
